@@ -1,12 +1,9 @@
 
 ext {
-
-    // sdk and tools
-    compileSdkVersion = 24
-    buildToolsVersion = '25.0.2'
+    compileSdkVersion = 29
 
     libVersions = [
-            support                     : '24.2.1',
+            support                     : '28.0.0',
             playServices                : '9.8.0', // never bump this too early, as this requires an update of Google Play services on the device
             picasso                     : '2.5.2',
             gson                        : '2.7',
@@ -26,7 +23,6 @@ ext {
             placesautocomplete          : '0.2-SNAPSHOT',
             crashlytics                 : '2.5.5@aar',
             adjust                      : '4.11.0',
-
             sgn : [
                     materialcolorcreator        : '1.0.0',
                     markhor                     : '1.0.8',
@@ -40,7 +36,7 @@ ext {
     libDependencies = [
 
             // internal libs
-            markhor                     : "com.shopgun.android:utils:$libVersions.sgn.markhor",
+            markhor                               : "com.shopgun.android:utils:$libVersions.sgn.markhor",
 //            markhor                     : project(':markhor'),
 //            zoomlayout                  : "com.shopgun.android:zoomlayout:$libVersions.sgn.zoomlayout",
 //            zoomlayout                  : project(':zoomlayout'),
@@ -48,18 +44,18 @@ ext {
 //            verso                       : project(':verso'),
 //            shopGunSdk                  : "com.shopgun.android:sdk:$libVersions.sgn.sdk",
 //            shopGunSdk                  : project(':shopGunSdk'),
-            materialcolorcreator        : project(':MaterialColorCreator'),
+            materialcolorcreator: project(':MaterialColorCreator'),
 //            materialcolorcreator        : "com.shopgun.android:materialcolorcreator:$libVersions.sgn.materialcolorcreator",
 //            dragSortListView            : project(':dragSortListView'),
 
             // support libs
-            supportv4                   : "com.android.support:support-v4:$libVersions.support",
-            appcompat                   : "com.android.support:appcompat-v7:$libVersions.support",
-            cardview                    : "com.android.support:cardview-v7:$libVersions.support",
-            design                      : "com.android.support:design:$libVersions.support",
-            recyclerview                : "com.android.support:recyclerview-v7:$libVersions.support",
-            preference                  : "com.android.support:preference-v14:$libVersions.support",
-            multidex                    : "com.android.support:multidex:1.0.1:$libVersions.support",
+            supportv4           : "com.android.support:support-v4:28.0.0",
+            appcompat           : 'androidx.appcompat:appcompat:1.0.0',
+            cardview            : "com.android.support:cardview-v7:28.0.0",
+            design              : "com.android.support:design:28.0.0",
+            recyclerview        : "com.android.support:recyclerview-v7:28.0.0",
+            preference          : "com.android.support:preference-v14:28.0.0",
+            multidex            : "com.android.support:multidex:1.0.1:$libVersions.support",
             annotations                 : "com.android.support:support-annotations:$libVersions.support",
 
 
@@ -87,17 +83,17 @@ ext {
             stetho                      : "com.facebook.stetho:stetho:$libVersions.stetho",
             stethoUrlconnection         : "com.facebook.stetho:stetho-urlconnection:$libVersions.stetho",
             circularReveal              : "com.github.ozodrukh:CircularReveal:$libVersions.circularReveal",
-            recyclerviewMultipleViewtypesAdapter : "com.yqritc:recyclerview-multiple-viewtypes-adapter:$libVersions.recyclerviewMultipleViewtypesAdapter",
-            placesautocomplete          : "com.seatgeek:placesautocomplete:$libVersions.placesautocomplete",
-            crashlytics                 : "com.crashlytics.sdk.android:crashlytics:$libVersions.crashlytics",
-            adjust                      : "com.adjust.sdk:adjust-android:$libVersions.adjust",
+            recyclerviewMultipleViewtypesAdapter: "com.yqritc:recyclerview-multiple-viewtypes-adapter:$libVersions.recyclerviewMultipleViewtypesAdapter",
+            placesautocomplete                  : "com.seatgeek:placesautocomplete:$libVersions.placesautocomplete",
+            crashlytics                         : "com.crashlytics.sdk.android:crashlytics:$libVersions.crashlytics",
+            adjust                              : "com.adjust.sdk:adjust-android:$libVersions.adjust",
 
 
             // tests
-            espresso                    : "com.android.support.test.espresso:espresso-core:$libVersions.espresso",
-            junit                       : "junit:junit:$libVersions.junit",
-            robolectric                 : "org.robolectric:robolectric:$libVersions.robolectric",
-            mockito                     : "org.mockito:mockito-core:$libVersions.mockito",
+            espresso                            : 'androidx.test.espresso:espresso-core:3.1.0',
+            junit                               : "junit:junit:$libVersions.junit",
+            robolectric                         : "org.robolectric:robolectric:$libVersions.robolectric",
+            mockito                             : "org.mockito:mockito-core:$libVersions.mockito",
     ]
 
 }

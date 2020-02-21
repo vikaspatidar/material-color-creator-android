@@ -2,15 +2,17 @@ apply from: 'dependencies.gradle'
 
 buildscript {
     repositories {
+        google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:3.6.0-rc03'
     }
 }
 
 allprojects {
     repositories {
+        google()
         jcenter()
     }
 }
